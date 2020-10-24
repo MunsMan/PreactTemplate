@@ -12,4 +12,5 @@ To analyse your build and the size run
 
 0. `npm install` or `yarn` *only if you have a new environment*
 1. `npm run analyse` or `yarn run analyse`
-2. Enjoy your build in the browser
+2. analyse and get your bundle size down!
+3. geek out about your small bundle size
