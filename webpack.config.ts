@@ -12,12 +12,12 @@ interface WebpackEnvironment {
 }
 
 module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }) => {
-    const port =  argv.port || 3000;
+    const port = argv.port || 3000;
     const config: webpack.Configuration = {
         name: 'client',
         target: 'web',
         context,
-        entry: 
+        entry:
             './src/index.tsx',
         output: {
             filename: 'bundle.js',
@@ -54,6 +54,16 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
         }
         const { HotModuleReplacementPlugin } = webpack;
         config.plugins?.push(new HotModuleReplacementPlugin)
+    }
+
+    if (argv.mode === 'production') {
+        config.plugins?.push(new webpack.optimize.ModuleConcatenationPlugin);
+        
+    }
+
+    if (process.env.NODE_ENV === 'analyse') {
+        const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+        config.plugins?.push(new BundleAnalyzerPlugin)
     }
 
     return config;
