@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production --config ./webpack.config.ts",
-    "start": "webpack serve --mode=development --progress --config ./webpack.config.ts"
+    "start": "webpack serve --mode=development --progress --config ./webpack.config.ts",
+    "analyse": "NODE_ENV=analyse webpack --mode=production --config ./webpack.config.ts"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3",
     "webpack": "^5.2.0",
+    "webpack-bundle-analyzer": "^3.9.0",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   },
