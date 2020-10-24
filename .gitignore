@@ -109,3 +109,9 @@ yarn.lock
 
 #MacOS
 .DS_Store
+
+#Ignore own build
+build
+
+#ignore package-lock.json
+package-lock.json
