@@ -1,6 +1,3 @@
-// @ts-ignore
-process.traceDeprecation = true;
-
 import webpack from 'webpack';
 import { resolve, join } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';

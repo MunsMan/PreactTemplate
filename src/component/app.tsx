@@ -7,7 +7,7 @@ interface App {
 const app: FunctionComponent<App> = () => {
     return (
         <div>
-            Hello from React
+            Hello from Preact
         </div>
     );
 };
