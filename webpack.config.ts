@@ -30,7 +30,23 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
                     test: /\.tsx?$/,
                     loader: 'ts-loader',
                     exclude: /node_modules/
-                }
+                },
+                {
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                        // Creates `style` nodes from JS strings
+                        'style-loader',
+                        // Translates CSS into CommonJS
+                        {
+                            loader: 'css-loader',
+                            options: {modules: true}
+                        },
+                        // Handling the .d.ts files
+                        "@teamsupercell/typings-for-css-modules-loader",
+                        // Compiles Sass to CSS
+                        'sass-loader',
+                    ],
+                  },
             ]
         },
         plugins: [
