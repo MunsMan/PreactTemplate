@@ -30,8 +30,15 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
         module: {
             rules: [
                 {
-                    test: /\.mdx?$/,
-                    use: ['babel-loader', '@mdx-js/loader']
+                    test: /\.md$/,
+                    use: [
+                        {
+                            loader: "html-loader"
+                        },
+                        {
+                            loader: "markdown-loader",
+                        }
+                    ]
                 },
                 {
                     test: /\.tsx?$/,
