@@ -1,5 +1,9 @@
 import { h, FunctionComponent } from 'preact';
-import ThemeButton from './themeButton';
+import { Router, Route } from 'preact-router';
+import About from '../routes/About';
+import Home from '../routes/Home';
+import JoeDalton from '../routes/JoeDalton';
+import NavBar from './navBar';
 
 interface App {
 
@@ -8,8 +12,12 @@ interface App {
 const app: FunctionComponent<App> = () => {
     return (
         <div>
-            Hello from Preact
-             <ThemeButton />
+            <NavBar />
+            <Router>
+                <Route path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/joe" component={JoeDalton} />
+            </Router>
         </div>
     );
 };

@@ -22,10 +22,24 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
         },
         devtool: argv.mode === 'production' ? false : 'eval-source-map',
         resolve: {
-            extensions: ['.ts', '.tsx', '.js', '.jsx']
+            extensions: ['.ts', '.tsx', '.js', '.jsx'],
+            "alias": {
+                "react": "preact/compat",
+            }
         },
         module: {
             rules: [
+                {
+                    test: /\.md$/,
+                    use: [
+                        {
+                            loader: "html-loader"
+                        },
+                        {
+                            loader: "markdown-loader",
+                        }
+                    ]
+                },
                 {
                     test: /\.tsx?$/,
                     loader: 'ts-loader',
@@ -46,7 +60,7 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
                         // Compiles Sass to CSS
                         'sass-loader',
                     ],
-                  },
+                }
             ]
         },
         plugins: [
