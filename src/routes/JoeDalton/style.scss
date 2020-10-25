@@ -1,0 +1,22 @@
+.data {
+    list-style-type: none;
+    li {
+        padding: 5px;
+    }
+}
+
+.item {
+    padding: 40px;
+}
+
+.body {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}

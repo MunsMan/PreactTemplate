@@ -17,8 +17,8 @@ const navBar: FunctionalComponent = () => {
                     </Link>
                 </li>
                 <li class={style.link}>
-                    <Link>
-                        Jon
+                    <Link href="/joe">
+                        Joe Dalton
                     </Link>
                 </li>
                 <li class={[style.link, style.right].join(' ')}>
