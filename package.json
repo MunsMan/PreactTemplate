@@ -24,9 +24,13 @@
   "homepage": "https://github.com/MunsMan/PreactTemplate#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@mdx-js/loader": "^1.6.19",
     "@teamsupercell/typings-for-css-modules-loader": "^2.3.0",
     "@types/webpack": "^4.41.23",
     "@types/webpack-dev-server": "^3.11.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-preact": "^2.0.0",
     "css-loader": "^5.0.0",
     "html-webpack-plugin": "5.0.0-alpha.3",
     "sass": "^1.27.0",
@@ -41,6 +45,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "preact": "^10.5.5"
+    "preact": "^10.5.5",
+    "preact-router": "^3.2.1"
   }
 }

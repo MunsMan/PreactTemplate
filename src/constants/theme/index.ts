@@ -1,7 +1,6 @@
 import { Themes } from "../../Types";
 
 const root = document.querySelector("html")!;
-const LIGHT = "(prefers-color-scheme: light)";
 const DARK = "(prefers-color-scheme: dark)";
 
 const setTheme = (theme: Themes) => {
