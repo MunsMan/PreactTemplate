@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from "preact";
+import style from './style.css';
 
 type Props = {
     content: any;
@@ -7,7 +8,9 @@ type Props = {
 const markdown: FunctionalComponent<Props> = (props: Props) => {
     return (
         <div>
-            <div dangerouslySetInnerHTML={{__html: props.content}} />
+            <div
+                class={style.md}
+                dangerouslySetInnerHTML={{ __html: props.content }} />
         </div>
     );
 }
