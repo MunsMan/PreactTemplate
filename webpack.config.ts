@@ -33,7 +33,7 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
                     test: /\.md$/,
                     use: [
                         {
-                            loader: "html-loader"
+                            loader: "html-loader",
                         },
                         {
                             loader: "markdown-loader",
@@ -46,7 +46,7 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
                     exclude: /node_modules/
                 },
                 {
-                    test: /\.s[ac]ss$/i,
+                    test: [[/\.css$/],[/\.s[ac]ss$/i]],
                     use: [
                         // Creates `style` nodes from JS strings
                         'style-loader',
