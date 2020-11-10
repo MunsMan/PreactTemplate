@@ -115,3 +115,7 @@ build
 
 #ignore package-lock.json
 package-lock.json
+
+
+// VS Code
+.vscode/

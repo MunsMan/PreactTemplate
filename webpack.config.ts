@@ -10,6 +10,7 @@ interface WebpackEnvironment {
 
 module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }) => {
     const port = argv.port || 3000;
+    const exclude = process.env.NODE_ENV === 'test'? [/node_modules/]:[/node_modules/,/test/, /\.test.tsx?$/]
     const config: webpack.Configuration = {
         name: 'client',
         target: 'web',
@@ -43,7 +44,7 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
                 {
                     test: /\.tsx?$/,
                     loader: 'ts-loader',
-                    exclude: /node_modules/
+                    exclude: exclude
                 },
                 {
                     test: /\.s[ac]ss$/i,
