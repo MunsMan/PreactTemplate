@@ -78,6 +78,7 @@ module.exports = (env: WebpackEnvironment, argv: { mode: string, port?: number }
         config.devServer = {
             contentBase: join(__dirname, 'dist'),
             compress: true,
+            historyApiFallback: true,
             port: port
         }
         const { HotModuleReplacementPlugin } = webpack;
