@@ -44,10 +44,3 @@ jobs:
 
       - name: Build the DockerDev Image
         run: docker build . --file dev.Dockerfile --tag prod-test:$(date +%s) --rm
-
-      - name: Test docker-compose dev
-        run: docker-compose -f docker-compose.dev.yml up --build
-
-      - name: Stop containers
-        if: always()
-        run: docker-compose down
