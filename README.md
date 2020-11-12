@@ -6,6 +6,9 @@
 
 This is a light bare bones Preact starter kit with Typescript.
 
+See a running Demo:
+[TemplateDemo](https://munsman.github.io/PreactTemplate/)
+
 ## To get up and running
 
 1. `npm install` or `yarn`
