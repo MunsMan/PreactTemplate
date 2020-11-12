@@ -1,4 +1,4 @@
-FROM node:latest as buildProject-stage
+FROM node:latest as build-stage
 
 WORKDIR /src
 
