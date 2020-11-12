@@ -10,13 +10,14 @@ on:
 
 jobs:
   test_local:
-    name: testlocal
-    runs-on: ${{ matrix.os }}
+    name: test local
+    runs-on: ubuntu-latest
+    # runs-on: ${{ matrix.os }}
 
     strategy:
       fail-fast: true
       matrix:
-        os: [macOS-latest, window-latest, ubuntu-latest]
+        # os: [macOS-latest, window-latest, ubuntu-latest]
         node-version: [10.x, 12.x, 14.x]
     
     steps:
