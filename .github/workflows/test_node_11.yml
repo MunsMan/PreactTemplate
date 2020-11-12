@@ -1,4 +1,4 @@
-name: Test CI
+name: Test Node 11
 
 on: 
   push:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [macOS-latest, windows-latest, ubuntu-latest]
-        node-version: [11.x, 12.x 13.x, 14.x]
+        node-version: [11.x]
     
     steps:
       - name: Setup Repo for Node
@@ -30,17 +30,3 @@ jobs:
       
       - run: npm install
       - run: npm run test
-  
-  test_docker:
-    name: test docker
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-        name: Setup Repo for Docker
-      
-      - name: Build the DockerProd Image
-        run: docker build . --file Dockerfile --tag prod-test:$(date +%s) --rm
-
-      - name: Build the DockerDev Image
-        run: docker build . --file dev.Dockerfile --tag prod-test:$(date +%s) --rm

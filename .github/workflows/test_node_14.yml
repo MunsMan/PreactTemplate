@@ -1,0 +1,32 @@
+name: Test Node 14
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test_local:
+    name: test local
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [macOS-latest, windows-latest, ubuntu-latest]
+        node-version: [14.x]
+    
+    steps:
+      - name: Setup Repo for Node
+        uses: actions/checkout@v2
+      
+      - name: use Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - run: npm install
+      - run: npm run test
