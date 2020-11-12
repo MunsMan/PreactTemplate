@@ -7,6 +7,7 @@
     "build": "webpack --mode=production --config ./webpack.config.ts",
     "start": "webpack serve --mode=development --progress --config ./webpack.config.ts",
     "dev": "npm run start",
+    "buildDocker": "docker build . -t prod:latest",
     "devDocker": "docker-compose -f docker-compose.dev.yml up --build",
     "analyse": "NODE_ENV=analyse webpack --mode=production --config ./webpack.config.ts",
     "test": "jest"
