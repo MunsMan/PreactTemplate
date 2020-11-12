@@ -1,4 +1,4 @@
-name: Test Node 11
+name: Test Node 12
 
 on: 
   push:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [macOS-latest, windows-latest, ubuntu-latest]
-        node-version: [11.x]
+        node-version: [12.x]
     
     steps:
       - name: Setup Repo for Node
