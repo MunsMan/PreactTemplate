@@ -1,6 +1,7 @@
 
-![Node Version 14](https://github.com/MunsMan/PreactTemplate/workflows/Test%20Node%2014/badge.svg)
-![Docker](https://github.com/MunsMan/PreactTemplate/workflows/Test%20Docker/badge.svg)
+![Node 12](https://github.com/MunsMan/PreactTemplate/workflows/Node%2012/badge.svg)
+![Node 14](https://github.com/MunsMan/PreactTemplate/workflows/Node%2014/badge.svg)
+![Docker](https://github.com/MunsMan/PreactTemplate/workflows/Docker/badge.svg)
 # PreactTemplate
 
 This is a light bare bones Preact starter kit with Typescript.
