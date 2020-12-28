@@ -3,7 +3,7 @@ import style from "./style.css";
 import marked from "marked";
 
 type Props = {
-    content: string;
+    content: any;
 };
 
 const markdown: FunctionalComponent<Props> = (props: Props) => {

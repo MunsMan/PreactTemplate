@@ -1,4 +1,4 @@
 declare module "*.md" {
-    const value: string;
+    const value: any;
     export default value;
 }
