@@ -13,6 +13,11 @@
     "buildDocker": "docker build . -t prod:latest",
     "devDocker": "docker-compose -f docker-compose.dev.yml up --build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{css,md,scss}": "prettier --write",
     "*.{js,jsx,ts,tsx}": "eslint --fix"
