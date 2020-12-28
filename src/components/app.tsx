@@ -1,15 +1,11 @@
-import { h, FunctionComponent } from 'preact';
-import { Router, Route } from 'preact-router';
-import About from '../routes/About';
-import Home from '../routes/Home';
-import JoeDalton from '../routes/JoeDalton';
-import NavBar from './navBar';
+import { h, FunctionComponent } from "preact";
+import { Router, Route } from "preact-router";
+import About from "../routes/About";
+import Home from "../routes/Home";
+import JoeDalton from "../routes/JoeDalton";
+import NavBar from "./navBar";
 
-interface App {
-
-}
-
-const app: FunctionComponent<App> = () => {
+const app: FunctionComponent<{}> = () => {
     return (
         <div>
             <NavBar />
