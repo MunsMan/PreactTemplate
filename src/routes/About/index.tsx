@@ -1,6 +1,6 @@
 import { FunctionalComponent, h } from "preact";
 import style from "./style.scss";
-import content from "./../../contents/about/about.md"
+import * as content from "./../../contents/about/about.md";
 import Markdown from "../../components/markdown";
 
 const about: FunctionalComponent = () => {
@@ -11,6 +11,6 @@ const about: FunctionalComponent = () => {
             </div>
         </div>
     );
-}
+};
 
 export default about;
