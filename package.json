@@ -34,7 +34,7 @@
     "preact-router": "^3.2.1"
   },
   "devDependencies": {
-    "@storybook/preact": "^6.1.11",
+    "@storybook/preact": "^6.1.15",
     "@teamsupercell/typings-for-css-modules-loader": "^2.2.0",
     "@testing-library/preact": "^2.0.1",
     "@types/enzyme": "^3.10.5",
