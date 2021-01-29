@@ -1,4 +1,21 @@
+![Node 12](https://github.com/MunsMan/PreactTemplate/workflows/Node%2012/badge.svg)
+![Node 14](https://github.com/MunsMan/PreactTemplate/workflows/Node%2014/badge.svg)
+![Docker](https://github.com/MunsMan/PreactTemplate/workflows/Docker/badge.svg)
+
 # Preact Typescript Template
+
+## Overview
+
+-   Available Scripts
+    -   dev
+    -   storybook
+    -   build
+    -   serve
+    -   lint
+    -   test
+-   Docker
+    -   production
+    -   develop
 
 ### Available Scripts
 
